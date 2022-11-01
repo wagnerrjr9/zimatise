@@ -1,8 +1,6 @@
-import asyncio
 import os
-import time
 
-import tgsender
+from tgsender.api_async import api_telegram
 import vidtool
 
 import utils
@@ -56,13 +54,11 @@ def get_list_content(content: str) -> list:
     return list_content
 
 
-def send_summary(chat_id, summary_content):
+async def send_summary(chat_id, summary_content):
 
     list_content = get_list_content(summary_content)
     for index, content in enumerate(list_content):
-        message_obj = asyncio.run(
-            tgsender.api_async.send_message(chat_id, content)
-        )
+        message_obj = await api_telegram.send_message(chat_id, content)
         if index == 0:
             first_message_id = message_obj.id
     return first_message_id
@@ -75,12 +71,12 @@ def get_summary_content(folder_path_summary):
     return summary_content
 
 
-def pin_summary_post(chat_id, summary_post_id):
+async def pin_summary_post(chat_id, summary_post_id):
 
-    asyncio.run(tgsender.api_async.pin_chat_message(chat_id, summary_post_id))
+    await api_telegram.pin_chat_message(chat_id, summary_post_id)
 
 
-def run(folder_path_summary):
+async def run(folder_path_summary):
     """Post and Pin the summary content
 
     Args:
@@ -89,9 +85,8 @@ def run(folder_path_summary):
 
     summary_content = get_summary_content(folder_path_summary)
     chat_id = get_chat_id(folder_path_summary)
-    summary_post_id = send_summary(chat_id, summary_content)
-    time.sleep(5)
-    pin_summary_post(chat_id, summary_post_id)
+    summary_post_id = await send_summary(chat_id, summary_content)
+    await pin_summary_post(chat_id, summary_post_id)
 
 
 def main(folder_path_project):

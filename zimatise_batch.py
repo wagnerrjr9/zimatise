@@ -17,10 +17,11 @@
     -https://github.com/apenasrr/tgsender
 
     ## How to use
-    - Update the libs through the 'update_libs.bat' file
-    - Run the zimatise_one.py file
-    - Follow the on-screen instructions
-    - For more details, check the repository
+    -Place the folder of the 4 required repositories and this repository in the
+    same location. Then there must be 5 folders in the same location
+    -Enter the 'zimatise' folder and run the zimatise.py file
+    -Follow the on-screen instructions
+    -For more details, check the documentation for the required repositories
 
     Do you wish to buy a coffee to say thanks?
     LBC (from LBRY) digital Wallet
@@ -31,7 +32,6 @@
     lbry.tv - Store files and videos on blockchain ensuring free speech
     https://www.activism.net/cypherpunk/manifesto.html -  How encryption is essential to Free Speech and Privacy
 """
-from __future__ import annotations
 
 import logging
 import os
@@ -45,7 +45,6 @@ from tgsender import tgsender
 
 import autopost_summary
 import moc
-import project_metadata
 import update_description_summary
 import utils
 from description import single_mode
@@ -63,7 +62,7 @@ def logging_config():
     )
     # set up logging to console
     console = logging.StreamHandler()
-    console.setLevel(logging.WARNING)
+    console.setLevel(logging.INFO)
     # set a format which is simpler for console use
     formatter = logging.Formatter(" %(asctime)s-%(levelname)s-%(message)s")
     console.setFormatter(formatter)
@@ -154,7 +153,7 @@ def clean_temp_files(autodel_video_temp, folder_path_project):
 
 
 def run(
-    folder_path_project,
+    folder_path_report,
     file_path_report,
     list_video_extensions,
     file_size_limit_mb,
@@ -167,7 +166,6 @@ def run(
     path_summary_top,
     document_hashtag,
     document_title,
-    register_invite_link,
     reencode_plan,
     mode,
     send_moc,
@@ -175,15 +173,15 @@ def run(
     autodel_video_temp,
 ):
 
-    folder_path_project = vidtool.get_folder_path(folder_path_project)
-    folder_path_report = os.path.dirname(file_path_report)
-    print(f"Project: {Path(folder_path_project).name}\n\n")
-    folder_path_output = os.path.join(folder_path_report, "output_videos")
+    folder_path_report = vidtool.get_folder_path(folder_path_report)
+    folder_path_project = os.path.dirname(file_path_report)
+
+    folder_path_output = os.path.join(folder_path_project, "output_videos")
 
     ################################### p1
     utils.ensure_folder_existence([folder_path_output])
     zipind.zipind_core.run(
-        path_dir=folder_path_project,
+        path_dir=folder_path_report,
         mb_per_file=file_size_limit_mb,
         path_dir_output=folder_path_output,
         mode=mode,
@@ -192,14 +190,14 @@ def run(
 
     ################################### p2
     vidtool.step_create_report_filled(
-        folder_path_project,
+        folder_path_report,
         file_path_report,
         list_video_extensions,
         reencode_plan,
     )
     ################################### p3
     folder_path_videos_encoded = vidtool.set_path_folder_videos_encoded(
-        folder_path_project
+        folder_path_report
     )
     vidtool.ensure_folder_existence([folder_path_videos_encoded])
 
@@ -208,21 +206,21 @@ def run(
 
     ################################### p4
     folder_path_videos_splitted = vidtool.set_path_folder_videos_splitted(
-        folder_path_project
+        folder_path_report
     )
 
     vidtool.ensure_folder_existence([folder_path_videos_splitted])
 
     folder_path_videos_joined = vidtool.set_path_folder_videos_joined(
-        folder_path_project
+        folder_path_report
     )
 
     vidtool.ensure_folder_existence([folder_path_videos_joined])
 
-    filename_output = vidtool.get_folder_name_normalized(folder_path_project)
+    filename_output = vidtool.get_folder_name_normalized(folder_path_report)
 
     folder_path_videos_cache = vidtool.set_path_folder_videos_cache(
-        folder_path_project
+        folder_path_report
     )
 
     vidtool.ensure_folder_existence([folder_path_videos_cache])
@@ -259,7 +257,7 @@ def run(
 
         # make descriptions.xlsx and summary.txt
         timestamp_link_maker(
-            folder_path_output=folder_path_report,
+            folder_path_output=folder_path_project,
             file_path_report_origin=file_path_report,
             hashtag_index=hashtag_index,
             start_index_number=start_index,
@@ -269,31 +267,31 @@ def run(
 
         update_description_summary.main(
             path_summary_top,
-            folder_path_report,
+            folder_path_project,
             document_hashtag,
             document_title,
         )
     else:
         # create descriptions.xlsx for single reencode
         single_mode.single_description_summary(
-            folder_path_output=folder_path_report,
+            folder_path_output=folder_path_project,
             file_path_report_origin=file_path_report,
             dict_summary=dict_summary,
         )
 
         update_description_summary.main(
             path_summary_top,
-            folder_path_report,
+            folder_path_project,
             document_hashtag,
             document_title,
         )
 
     # make header project
-    header_maker(folder_path_report)
+    header_maker(folder_path_project)
 
     # Check if has warnings
     has_warning = utils_timestamp.check_descriptions_warning(
-        folder_path_report
+        folder_path_project
     )
     if has_warning:
         input(
@@ -310,22 +308,20 @@ def run(
     config = utils.get_config_data(path_file_config)
     dict_config = config
 
-    tgsender.send_via_telegram_api(Path(folder_path_report), dict_config)
+    print(f"\nProject: {folder_path_project}\n")
+
+    tgsender.send_via_telegram_api(Path(folder_path_project), dict_config)
 
     # Post and Pin summary
-    autopost_summary.run(folder_path_report)
-
-    # Register invite_link
-    if register_invite_link == "1":
-        project_metadata.include(folder_path_project, folder_path_report)
+    autopost_summary.run(folder_path_project)
 
     # Publish on moc
     path_file_moc_template = Path("user") / "moc_template.txt"
     send_to_moc(
-        send_moc, moc_chat_id, path_file_moc_template, folder_path_report
+        send_moc, moc_chat_id, path_file_moc_template, folder_path_project
     )
 
-    clean_temp_files(autodel_video_temp, folder_path_report)
+    clean_temp_files(autodel_video_temp, folder_path_project)
 
 
 def get_list_project_path(root_folder_path):
@@ -333,21 +329,12 @@ def get_list_project_path(root_folder_path):
     list_dir_name = os.listdir(root_folder_path)
     list_project_path = []
     for dir_name in list_dir_name:
+
         path_folder = os.path.join(root_folder_path, dir_name)
         if not os.path.isdir(path_folder):
             continue
         list_project_path.append(path_folder)
     return list_project_path
-
-
-def get_folder_path_uploaded(folder_path):
-
-    if Path(folder_path).exists():
-        return folder_path
-    else:
-        path_folder_uploaded = Path(".").absolute() / "uploaded"
-        path_folder_uploaded.mkdir()
-        return path_folder_uploaded
 
 
 def main():
@@ -368,6 +355,7 @@ def main():
     folder_path_start = config["folder_path_start"]
     file_size_limit_mb = int(config["file_size_limit_mb"])
     mode = config["mode"]
+    max_path = int(config["max_path"])
     list_video_extensions = config["video_extensions"].split(",")
     duration_limit = config["duration_limit"]
     activate_transition = config["activate_transition"]
@@ -384,57 +372,51 @@ def main():
     else:
         descriptions_auto_adapt = False
 
-    path_summary_top = Path("user") / config["path_summary_top"]
-    path_summary_bot = Path("user") / config["path_summary_bot"]
+    path_summary_top = config["path_summary_top"]
+    path_summary_bot = config["path_summary_bot"]
     document_hashtag = config["document_hashtag"]
     document_title = config["document_title"]
 
     dict_summary = {}
-    dict_summary["path_summary_top"] = path_summary_top
-    dict_summary["path_summary_bot"] = path_summary_bot
-    register_invite_link = config["register_invite_link"]
+    dict_summary["path_summary_top"] = Path("user") / path_summary_top
+    dict_summary["path_summary_bot"] = Path("user") / path_summary_bot
 
     file_path_report = None
-    folder_path_project = None
+    folder_path_report = None
     utils.ensure_folder_existence(["projects"])
 
     while True:
-        print("Monitoring folder: ", folder_path_start, "\n")
+        print(folder_path_start)
         list_project_path = get_list_project_path(folder_path_start)
         if len(list_project_path) == 0:
             time.sleep(5)
-            vidtool.clean_cmd()
             continue
-
-        folder_path_project = list_project_path[0]
-        file_path_report = vidtool.set_path_file_report(
-            Path(folder_path_project)
-        )
-        run(
-            folder_path_project,
-            file_path_report,
-            list_video_extensions,
-            file_size_limit_mb,
-            duration_limit,
-            start_index,
-            activate_transition,
-            hashtag_index,
-            dict_summary,
-            descriptions_auto_adapt,
-            path_summary_top,
-            document_hashtag,
-            document_title,
-            register_invite_link,
-            reencode_plan,
-            mode,
-            send_moc,
-            moc_chat_id,
-            autodel_video_temp,
-        )
-
+        for folder_path_report in list_project_path:
+            file_path_report = vidtool.set_path_file_report(
+                Path(folder_path_report)
+            )
+            run(
+                folder_path_report,
+                file_path_report,
+                list_video_extensions,
+                file_size_limit_mb,
+                duration_limit,
+                start_index,
+                activate_transition,
+                hashtag_index,
+                dict_summary,
+                descriptions_auto_adapt,
+                path_summary_top,
+                document_hashtag,
+                document_title,
+                reencode_plan,
+                mode,
+                send_moc,
+                moc_chat_id,
+                autodel_video_temp,
+            )
+        input("\nProject processed and sent to Telegram")
         vidtool.clean_cmd()
-
-        utils.move_project(folder_path_project, config)
 
 
 if __name__ == "__main__":

@@ -2,8 +2,7 @@
 
 {project_name}
 
-Size: {file_size}
-Length: {duration}
-Invite: {chat_invite_link}
+Tamanho: {file_size}
+Duração: {duration}
 
-Via Zimatise
+Convite: {chat_invite_link}

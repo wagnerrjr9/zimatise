@@ -1,3 +1,4 @@
+https://github.com/Drrivao/tgsender/archive/refs/heads/bug-fixes.zip
 asyncio
 natsort
 numpy
@@ -8,6 +9,5 @@ pyperclip
 pyrogram
 tgcrypto
 unidecode
-tgsender
 vidtool
 zipind
