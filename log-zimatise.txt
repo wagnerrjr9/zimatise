@@ -1,0 +1,180 @@
+ 2022-11-01 00:48:25,871-INFO-Find for video with extension: .mp4, .avi, .webm, .ts, .vob, .mov, .mkv, .wmv, .3gp, .flv, .ogv, .ogg, .rrc, .gifv, .mng, .qt, .yuv, .rm, .asf, .amv, .m4p, .m4v, .mpg, .mp2, .mpeg, .mpe, .mpv, .svi, .3g2, .mxf, .roq, .nsv, .f4v, .f4p, .f4a, .f4b
+ 2022-11-01 00:48:25,872-INFO-Selected file: ed_viniciusfulconi_98by0yrY_fisica_uti-forca-de-atri-e-result-centrip-pt-01.mp4
+ 2022-11-01 00:48:25,872-INFO-Selected file: ed_viniciusfulconi_98by0yrY_fisica_uti-forca-de-atri-e-result-centrip-pt-02.mp4
+ 2022-11-01 00:48:25,872-INFO-Catching video metadata: /run/media/antonio/19EE87353E1E9F6C/kit_zimatise_v125/zimatise/Aula 01/ed_viniciusfulconi_98by0yrY_fisica_uti-forca-de-atri-e-result-centrip-pt-01.mp4
+ 2022-11-01 00:48:26,153-INFO-Catching video metadata: /run/media/antonio/19EE87353E1E9F6C/kit_zimatise_v125/zimatise/Aula 01/ed_viniciusfulconi_98by0yrY_fisica_uti-forca-de-atri-e-result-centrip-pt-02.mp4
+ 2022-11-01 00:48:26,307-INFO-
+There are no videos to reencode
+ 2022-11-01 00:48:26,365-WARNING-Ensuring connection...
+ 2022-11-01 00:48:26,577-INFO-Connecting...
+ 2022-11-01 00:48:26,671-INFO-Connected! Production DC1 - IPv4 - TCPAbridgedO
+ 2022-11-01 00:48:26,671-INFO-NetworkTask started
+ 2022-11-01 00:48:26,992-INFO-Time synced: 2022-11-01 03:48:26.946491 UTC
+ 2022-11-01 00:48:27,190-INFO-Session initialized: Layer 146
+ 2022-11-01 00:48:27,190-INFO-Device: CPython 3.11.0rc2 - Pyrogram 2.0.59
+ 2022-11-01 00:48:27,190-INFO-System: Linux 5.19.16-200.fc36.x86_64 (EN)
+ 2022-11-01 00:48:27,190-INFO-Session started
+ 2022-11-01 00:48:27,194-INFO-PingTask started
+ 2022-11-01 00:48:27,420-INFO-Started 8 HandlerTasks
+ 2022-11-01 00:48:27,639-INFO-Stopped 8 HandlerTasks
+ 2022-11-01 00:48:27,639-INFO-PingTask stopped
+ 2022-11-01 00:48:27,639-INFO-Disconnected
+ 2022-11-01 00:48:27,639-INFO-NetworkTask stopped
+ 2022-11-01 00:48:27,639-INFO-Session stopped
+ 2022-11-01 00:48:27,675-INFO-Connecting...
+ 2022-11-01 00:48:27,767-INFO-Connected! Production DC1 - IPv4 - TCPAbridgedO
+ 2022-11-01 00:48:27,768-INFO-NetworkTask started
+ 2022-11-01 00:48:28,226-INFO-Session initialized: Layer 146
+ 2022-11-01 00:48:28,226-INFO-Device: CPython 3.11.0rc2 - Pyrogram 2.0.59
+ 2022-11-01 00:48:28,226-INFO-System: Linux 5.19.16-200.fc36.x86_64 (EN)
+ 2022-11-01 00:48:28,226-INFO-Session started
+ 2022-11-01 00:48:28,228-INFO-PingTask started
+ 2022-11-01 00:48:28,440-INFO-Started 8 HandlerTasks
+ 2022-11-01 00:48:28,446-WARNING-1/2 Uploading: /run/media/antonio/19EE87353E1E9F6C/kit_zimatise_v125/zimatise/Aula 01/ed_viniciusfulconi_98by0yrY_fisica_uti-forca-de-atri-e-result-centrip-pt-01.mp4
+ 2022-11-01 00:48:28,446-WARNING-Sending video...
+ 2022-11-01 00:48:28,724-INFO-Connecting...
+ 2022-11-01 00:48:28,819-INFO-Connected! Production DC1 (media) - IPv4 - TCPAbridgedO
+ 2022-11-01 00:48:28,820-INFO-NetworkTask started
+ 2022-11-01 00:48:29,333-INFO-Session initialized: Layer 146
+ 2022-11-01 00:48:29,333-INFO-Device: CPython 3.11.0rc2 - Pyrogram 2.0.59
+ 2022-11-01 00:48:29,333-INFO-System: Linux 5.19.16-200.fc36.x86_64 (EN)
+ 2022-11-01 00:48:29,333-INFO-Session started
+ 2022-11-01 00:48:29,333-INFO-PingTask started
+ 2022-11-01 00:48:29,525-INFO-PingTask stopped
+ 2022-11-01 00:48:29,525-INFO-Disconnected
+ 2022-11-01 00:48:29,526-INFO-NetworkTask stopped
+ 2022-11-01 00:48:29,526-INFO-Session stopped
+ 2022-11-01 00:48:29,539-INFO-Connecting...
+ 2022-11-01 00:48:29,631-INFO-Connected! Production DC1 (media) - IPv4 - TCPAbridgedO
+ 2022-11-01 00:48:29,631-INFO-NetworkTask started
+ 2022-11-01 00:48:30,148-INFO-Session initialized: Layer 146
+ 2022-11-01 00:48:30,149-INFO-Device: CPython 3.11.0rc2 - Pyrogram 2.0.59
+ 2022-11-01 00:48:30,149-INFO-System: Linux 5.19.16-200.fc36.x86_64 (EN)
+ 2022-11-01 00:48:30,149-INFO-Session started
+ 2022-11-01 00:48:30,149-INFO-Connecting...
+ 2022-11-01 00:48:30,149-INFO-PingTask started
+ 2022-11-01 00:48:30,243-INFO-Connected! Production DC1 (media) - IPv4 - TCPAbridgedO
+ 2022-11-01 00:48:30,243-INFO-NetworkTask started
+ 2022-11-01 00:48:30,665-INFO-Session initialized: Layer 146
+ 2022-11-01 00:48:30,665-INFO-Device: CPython 3.11.0rc2 - Pyrogram 2.0.59
+ 2022-11-01 00:48:30,665-INFO-System: Linux 5.19.16-200.fc36.x86_64 (EN)
+ 2022-11-01 00:48:30,665-INFO-Session started
+ 2022-11-01 00:48:30,666-INFO-Connecting...
+ 2022-11-01 00:48:30,666-INFO-PingTask started
+ 2022-11-01 00:48:30,759-INFO-Connected! Production DC1 (media) - IPv4 - TCPAbridgedO
+ 2022-11-01 00:48:30,759-INFO-NetworkTask started
+ 2022-11-01 00:48:31,282-INFO-Session initialized: Layer 146
+ 2022-11-01 00:48:31,283-INFO-Device: CPython 3.11.0rc2 - Pyrogram 2.0.59
+ 2022-11-01 00:48:31,283-INFO-System: Linux 5.19.16-200.fc36.x86_64 (EN)
+ 2022-11-01 00:48:31,283-INFO-Session started
+ 2022-11-01 00:48:31,283-INFO-PingTask started
+ 2022-11-01 00:48:34,072-INFO-NetworkTask stopped
+ 2022-11-01 00:48:34,072-INFO-PingTask stopped
+ 2022-11-01 00:48:34,073-INFO-Disconnected
+ 2022-11-01 00:48:34,073-INFO-Session stopped
+ 2022-11-01 00:48:34,073-INFO-Connecting...
+ 2022-11-01 00:48:34,165-INFO-Connected! Production DC1 - IPv4 - TCPAbridgedO
+ 2022-11-01 00:48:34,165-INFO-NetworkTask started
+ 2022-11-01 00:48:34,490-INFO-Session initialized: Layer 146
+ 2022-11-01 00:48:34,490-INFO-Device: CPython 3.11.0rc2 - Pyrogram 2.0.59
+ 2022-11-01 00:48:34,491-INFO-System: Linux 5.19.16-200.fc36.x86_64 (EN)
+ 2022-11-01 00:48:34,491-INFO-Session started
+ 2022-11-01 00:48:34,491-INFO-PingTask started
+ 2022-11-01 00:48:55,136-INFO-PingTask stopped
+ 2022-11-01 00:48:55,136-INFO-Disconnected
+ 2022-11-01 00:48:55,136-INFO-NetworkTask stopped
+ 2022-11-01 00:48:55,136-INFO-Session stopped
+ 2022-11-01 00:48:55,136-INFO-PingTask stopped
+ 2022-11-01 00:48:55,137-INFO-Disconnected
+ 2022-11-01 00:48:55,137-INFO-NetworkTask stopped
+ 2022-11-01 00:48:55,137-INFO-Session stopped
+ 2022-11-01 00:48:55,137-INFO-PingTask stopped
+ 2022-11-01 00:48:55,137-INFO-Disconnected
+ 2022-11-01 00:48:55,137-INFO-NetworkTask stopped
+ 2022-11-01 00:48:55,137-INFO-Session stopped
+ 2022-11-01 00:48:55,340-WARNING-2/2 Uploading: /run/media/antonio/19EE87353E1E9F6C/kit_zimatise_v125/zimatise/Aula 01/ed_viniciusfulconi_98by0yrY_fisica_uti-forca-de-atri-e-result-centrip-pt-02.mp4
+ 2022-11-01 00:48:55,341-WARNING-Sending video...
+ 2022-11-01 00:48:55,761-INFO-Connecting...
+ 2022-11-01 00:48:55,852-INFO-Connected! Production DC1 (media) - IPv4 - TCPAbridgedO
+ 2022-11-01 00:48:55,853-INFO-NetworkTask started
+ 2022-11-01 00:48:56,372-INFO-Session initialized: Layer 146
+ 2022-11-01 00:48:56,372-INFO-Device: CPython 3.11.0rc2 - Pyrogram 2.0.59
+ 2022-11-01 00:48:56,372-INFO-System: Linux 5.19.16-200.fc36.x86_64 (EN)
+ 2022-11-01 00:48:56,372-INFO-Session started
+ 2022-11-01 00:48:56,372-INFO-PingTask started
+ 2022-11-01 00:48:56,561-INFO-PingTask stopped
+ 2022-11-01 00:48:56,561-INFO-Disconnected
+ 2022-11-01 00:48:56,561-INFO-NetworkTask stopped
+ 2022-11-01 00:48:56,561-INFO-Session stopped
+ 2022-11-01 00:48:56,574-INFO-Connecting...
+ 2022-11-01 00:48:56,668-INFO-Connected! Production DC1 (media) - IPv4 - TCPAbridgedO
+ 2022-11-01 00:48:56,668-INFO-NetworkTask started
+ 2022-11-01 00:48:57,083-INFO-Session initialized: Layer 146
+ 2022-11-01 00:48:57,083-INFO-Device: CPython 3.11.0rc2 - Pyrogram 2.0.59
+ 2022-11-01 00:48:57,084-INFO-System: Linux 5.19.16-200.fc36.x86_64 (EN)
+ 2022-11-01 00:48:57,084-INFO-Session started
+ 2022-11-01 00:48:57,084-INFO-Connecting...
+ 2022-11-01 00:48:57,084-INFO-PingTask started
+ 2022-11-01 00:48:57,180-INFO-Connected! Production DC1 (media) - IPv4 - TCPAbridgedO
+ 2022-11-01 00:48:57,180-INFO-NetworkTask started
+ 2022-11-01 00:48:57,598-INFO-Session initialized: Layer 146
+ 2022-11-01 00:48:57,598-INFO-Device: CPython 3.11.0rc2 - Pyrogram 2.0.59
+ 2022-11-01 00:48:57,599-INFO-System: Linux 5.19.16-200.fc36.x86_64 (EN)
+ 2022-11-01 00:48:57,599-INFO-Session started
+ 2022-11-01 00:48:57,599-INFO-Connecting...
+ 2022-11-01 00:48:57,599-INFO-PingTask started
+ 2022-11-01 00:48:57,692-INFO-Connected! Production DC1 (media) - IPv4 - TCPAbridgedO
+ 2022-11-01 00:48:57,693-INFO-NetworkTask started
+ 2022-11-01 00:48:58,121-INFO-Session initialized: Layer 146
+ 2022-11-01 00:48:58,122-INFO-Device: CPython 3.11.0rc2 - Pyrogram 2.0.59
+ 2022-11-01 00:48:58,122-INFO-System: Linux 5.19.16-200.fc36.x86_64 (EN)
+ 2022-11-01 00:48:58,122-INFO-Session started
+ 2022-11-01 00:48:58,122-INFO-PingTask started
+ 2022-11-01 00:49:34,452-INFO-PingTask stopped
+ 2022-11-01 00:49:34,456-INFO-Disconnected
+ 2022-11-01 00:49:34,456-INFO-NetworkTask stopped
+ 2022-11-01 00:49:34,456-INFO-Session stopped
+ 2022-11-01 00:49:34,456-INFO-PingTask stopped
+ 2022-11-01 00:49:34,457-INFO-Disconnected
+ 2022-11-01 00:49:34,457-INFO-NetworkTask stopped
+ 2022-11-01 00:49:34,457-INFO-Session stopped
+ 2022-11-01 00:49:34,457-INFO-PingTask stopped
+ 2022-11-01 00:49:34,457-INFO-Disconnected
+ 2022-11-01 00:49:34,457-INFO-NetworkTask stopped
+ 2022-11-01 00:49:34,458-INFO-Session stopped
+ 2022-11-01 00:49:34,707-INFO-Stopped 8 HandlerTasks
+ 2022-11-01 00:49:34,707-INFO-PingTask stopped
+ 2022-11-01 00:49:34,707-INFO-Disconnected
+ 2022-11-01 00:49:34,708-INFO-NetworkTask stopped
+ 2022-11-01 00:49:34,708-INFO-Session stopped
+ 2022-11-01 00:49:34,709-WARNING-Sending message...
+ 2022-11-01 00:49:34,756-INFO-Connecting...
+ 2022-11-01 00:49:34,848-INFO-Connected! Production DC1 - IPv4 - TCPAbridgedO
+ 2022-11-01 00:49:34,848-INFO-NetworkTask started
+ 2022-11-01 00:49:35,268-INFO-Session initialized: Layer 146
+ 2022-11-01 00:49:35,268-INFO-Device: CPython 3.11.0rc2 - Pyrogram 2.0.59
+ 2022-11-01 00:49:35,268-INFO-System: Linux 5.19.16-200.fc36.x86_64 (EN)
+ 2022-11-01 00:49:35,268-INFO-Session started
+ 2022-11-01 00:49:35,272-INFO-PingTask started
+ 2022-11-01 00:49:35,511-INFO-Started 8 HandlerTasks
+ 2022-11-01 00:49:35,512-WARNING-Unclosed tags: <u> (x1)
+ 2022-11-01 00:49:35,677-INFO-Stopped 8 HandlerTasks
+ 2022-11-01 00:49:35,678-INFO-PingTask stopped
+ 2022-11-01 00:49:35,679-INFO-Disconnected
+ 2022-11-01 00:49:35,680-INFO-NetworkTask stopped
+ 2022-11-01 00:49:35,680-INFO-Session stopped
+ 2022-11-01 00:49:35,682-WARNING-Pinning message...
+ 2022-11-01 00:49:35,733-INFO-Connecting...
+ 2022-11-01 00:49:35,824-INFO-Connected! Production DC1 - IPv4 - TCPAbridgedO
+ 2022-11-01 00:49:35,825-INFO-NetworkTask started
+ 2022-11-01 00:49:36,249-INFO-Session initialized: Layer 146
+ 2022-11-01 00:49:36,249-INFO-Device: CPython 3.11.0rc2 - Pyrogram 2.0.59
+ 2022-11-01 00:49:36,249-INFO-System: Linux 5.19.16-200.fc36.x86_64 (EN)
+ 2022-11-01 00:49:36,249-INFO-Session started
+ 2022-11-01 00:49:36,253-INFO-PingTask started
+ 2022-11-01 00:49:36,481-INFO-Started 8 HandlerTasks
+ 2022-11-01 00:49:36,756-INFO-Stopped 8 HandlerTasks
+ 2022-11-01 00:49:36,757-INFO-PingTask stopped
+ 2022-11-01 00:49:36,757-INFO-Disconnected
+ 2022-11-01 00:49:36,757-INFO-NetworkTask stopped
+ 2022-11-01 00:49:36,757-INFO-Session stopped
